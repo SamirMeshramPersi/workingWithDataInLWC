@@ -1,0 +1,36 @@
+<template>
+    <lightning-card>
+    <h1>Samir Meshram</h1>
+    <lightning-combobox
+      name="account"
+      label="Select an account"
+      value={selectedAccountId}
+      placeholder="Select an account"
+      options={accountOptions}
+      onchange={handleAccountChange}
+      required
+    ></lightning-combobox>
+    <lightning-button variant="brand" label="Edit Account" onclick={handleEditAccountClick}></lightning-button>
+    <lightning-button variant="brand" label="Display Accounts" onclick={handleDisplayAccountsClick}></lightning-button>
+  
+    <template if:true={isModalOpen}>
+      <c-account-modal
+        selected-account-id={selectedAccountId}
+        account-types={accountTypes}
+        industries={industries}
+        onclose={handleModalClose}
+        onsave={handleModalSave}
+      ></c-account-modal>
+    </template>
+  
+    <template if:true={accounts}>
+      <lightning-datatable
+        key-field="Id"
+        data={accounts}
+        columns={columns}
+        onrowaction={handleRowAction}
+      ></lightning-datatable>
+    </template>
+</lightning-card>
+  </template>
+  

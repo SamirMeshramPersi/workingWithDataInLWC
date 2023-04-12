@@ -1,0 +1,12 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true
+  },
+  "apexPMD.pmdPath": "C:\\Users\\samir_meshram\\pmd-bin-6.47.0",
+  "apexPMD.priorityErrorThreshold": 1,
+  "apexPMD.priorityWarnThreshold": 1,
+  "apexPMD.rulesetPath": "C:\\Users\\samir_meshram\\pmd-bin-6.47.0\\Ruleset.xml",
+  "apexPMD.useDefaultRuleset": false
+}
