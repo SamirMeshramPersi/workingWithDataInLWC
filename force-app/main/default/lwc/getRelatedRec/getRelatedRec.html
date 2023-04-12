@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Related Records">
+        <div class="slds-m-around_medium slds-p-top_medium slds-border_bottom">
+            <lightning-datatable
+                data={relatedRecords.data}
+                columns={columns}
+                key-field="Id"
+                onsave={handleSave}
+                draft-values={draftValues}
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
